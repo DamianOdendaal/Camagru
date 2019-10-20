@@ -1,5 +1,6 @@
 // header here
 
+// add a message that says that you have succesfully registered
 
 <html>
 	<head>
