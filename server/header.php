@@ -8,16 +8,15 @@
 	<body>
 	       <div class = "header">
                 <h1 style = "margin-top:1%;">Camagru</h1>
-                <h4><a href = "login.php">Login</a> &nbsp <a href = "register.php">Register</a></h4>
+                <h4><a href = "login.php">Login</a> &nbsp <a href = "register.php">Register</a> &nbsp <a href = "">Disconnect</a></h4>
             </div>
 
         <div class = "menu_bar">
             <ul>
                 <li class = "active" id = "login"><a href = "index.php">Home</a></li>
-                <li><a href = "">Sign Up</a></li>
-                <li><a href = "">Products</a>
-                <li><a href = "">My Account</a>
-      <!--         <li><a href = "https://web.whatsapp.com/">Contact us</a></li>    -->
+                <li><a href = "">My Gallery</a></li>
+                <li><a href = "">Montages</a>
+                <li><a href = "">Administration</a>
             </ul>
         </div>
 	</body>
