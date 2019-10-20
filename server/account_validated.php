@@ -1,6 +1,8 @@
 // header here
 
-// add a message that says that you have succesfully registered
+
+// add a bg image
+// add a box that has a message that says that you have successfully registered but make the message and the part where you can login one div thats centered 
 
 <html>
 	<head>
