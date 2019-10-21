@@ -64,7 +64,8 @@ body {
   
 
   <div class="main">
-    <h2>Click below to add a specific filter</h2>
+
+  <!--  camera should probably go here-->
   </div>
 
   <div class="right">
@@ -78,7 +79,7 @@ body {
   </div>
 </div>
 
-<div style="background-color:#1EE2E2; text-align:center; padding:10px; margin-bottom:0%;">© copyright Camagru.com</div>  <!-- fix this margin to work with the bottom-->
+<div style="background-color:#1EE2E2; text-align:center; padding:10px; margin-top:20%;">© copyright Camagru.com</div>  <!-- fix this margin to work with the bottom-->
 
 </body>
 </html>
