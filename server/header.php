@@ -3,7 +3,14 @@
 
 <html>
 	<head>
-        <link rel = "stylesheet" href = "style.css">
+        <style>
+            body {
+                background-image: url('https://images.unsplash.com/photo-1571624750891-64dfc55a984b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80');
+                width:100%;
+                height:auto;
+
+            }
+        </style>
 	</head>
 	<body>
 	       <div class = "header">
