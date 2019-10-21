@@ -35,6 +35,12 @@
 
 h1 {
     font-family:calibri;
+    color: 
+}
+body {
+    font-family:Verdana;
+    background-image: url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80');
+    background-size: 100%;
 }
 
 @media only screen and (max-width:620px) {
@@ -45,9 +51,9 @@ h1 {
 }
 </style>
 </head>
-<body style="font-family:Verdana;color:#aaaaaa;">
+<body>
 
-<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+<div style="background-color:#A45AE2; padding:15px; text-align:center; ">
   <h1>Camagru</h1>
 </div>
 
