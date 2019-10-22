@@ -1,29 +1,15 @@
 
-// header here
-
-
-// add a bg image
-
-<!-- header here -->
 <html>
 	<head>
 		<style>
 		body, html {
 			height: 100%;
 		}
-			.image {
-				height: 50%;
-				width: 40%;
-				display: block;
- 				margin-left: auto;
-  				margin-right: auto;
-			}
-			form {
 				margin-top: 40%;
 				text-align: center;
 			}
 			body {
-				background: url('https://images.unsplash.com/photo-1506638794690-bbea5c6f0ab7?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80') no-repeat;
+				background: url('https://images.unsplash.com/photo-1497030947858-3f40f1508e84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat;
 				height:100%;
 				background-size:cover;
 			}

@@ -1,4 +1,3 @@
-// header here bruh bruh
 
 <html>
 	<head>
