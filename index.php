@@ -1,3 +1,0 @@
-<?PHP
-    include ('header.php');
-?>

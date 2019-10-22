@@ -25,6 +25,7 @@
 		</fieldset>
 			<br/></br>
 		<!-- add a section here that allows you to chose a file that you would like to use if you dont wanna take a pic-->
+        <div style="background-color:#1EE2E2; text-align:center; padding:10px; margin-bottom:0%;">© copyright Camagru.com</div>
 	</body>
 
 </html>
