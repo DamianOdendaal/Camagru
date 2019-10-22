@@ -1,11 +1,11 @@
 (function() {
     var captureButton = document.getElementById('capture');
-    captureButton.addEventListener("click", onCapture);
+    captureButton.addEventListener("click", onCapture);		//google
     var canvas = document.getElementById('canvas'),
     context = canvas.getContext('2d'),
     video = document.getElementById('video');
 
-    vendorUrl = window.URL || window.webkitURL;
+    vendorUrl = window.URL || window.webkitURL;		// google 
 
     navigator.getMedia =    navigator.getUserMedia ||
                             navigator.webkitGetUserMedia ||
@@ -17,7 +17,7 @@
         video: true,
         audio: false
     }, function(stream){
-        streamObj = stream;
+        streamObj = stream;		// test without using the stream object here
         video.srcObject = stream;
         video.play()
     }, function(error){
@@ -25,7 +25,7 @@
     });
 
     function onCapture() {
-        console.log(canvas.width, canvas.height);
+        console.log(canvas.width, canvas.height); // remember to remove these
         console.log(canvas.width, canvas.height);
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
     }
