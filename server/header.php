@@ -68,6 +68,6 @@
                  <li><a href = "">My Gallery</a>
                <li><a href = "https://web.whatsapp.com/">Contact us</a></li>
             </ul>
-        </div>
+        </div><br/><br/><br/><br/>
 </html>
 

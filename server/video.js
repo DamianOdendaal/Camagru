@@ -1,4 +1,6 @@
 (function() {
+    var captureButton = document.getElementById('capture');
+    captureButton.addEventListener("click", onCapture);
     var canvas = document.getElementById('canvas'),
     context = canvas.getContext('2d'),
     video = document.getElementById('video');
@@ -10,13 +12,22 @@
                             navigator.mozGetUserMedia ||
                             navigator.msGetUserMedia;
 
+    var streamObj;
     navigator.getMedia({
         video: true,
         audio: false
     }, function(stream){
+        streamObj = stream;
         video.srcObject = stream;
         video.play()
     }, function(error){
         console.log('h');
     });
-})(); 
+
+    function onCapture() {
+        console.log(canvas.width, canvas.height);
+        console.log(canvas.width, canvas.height);
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    }
+})();
+

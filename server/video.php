@@ -10,18 +10,19 @@
             }
             video {
                 width: 400px;
-                height: 400px;
+                height: 300px;
             }
             canvas {
-                width: 300px;
+                width: 400px;
                 height: 300px;
             }
         </style>
     </head>
     <div class="booth">
+        <button id = "capture">ass</button>
         <video id = "video" autoplay>  </video>
         <canvas id = "canvas"></canvas>
     </div>
-    <script src = "video.js"></script>
+    <script src = "server/video.js"></script>
 
 <html>    
