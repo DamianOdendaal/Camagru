@@ -1,8 +1,8 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
-<!--here in the footer you will add your filters and the button to take the picture  -->
 	<body>
 		<table>
 			<tr>
@@ -13,7 +13,7 @@
 				<td></td>
 			</tr>
 		</table><br/>
-		<button> take a picture </button> <!--find a way to change the shape of your button -->
+		<button> <i class="fas fa-camera"></i></button> <!--find a way to change the shape of your button -->
 		<br/></br>
 		<!-- add a section here that allows you to chose a file that you would like to use if you dont wanna take a pic-->
 	</body>
