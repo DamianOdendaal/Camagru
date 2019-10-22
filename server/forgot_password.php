@@ -2,16 +2,17 @@
 <html>
 	<head>
 		<style>
-		body, html {
-			height: 100%;
-		}
-				margin-top: 40%;
+			form {
+				margin-top: 5%;
 				text-align: center;
 			}
 			body {
 				background: url('https://images.unsplash.com/photo-1497030947858-3f40f1508e84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat;
-				height:100%;
 				background-size:cover;
+				width:100%;
+				height:100%;
+				font-size: 200%;
+				: #1CAEA9;
 			}
 		</style>
 	</head>
