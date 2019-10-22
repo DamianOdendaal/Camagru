@@ -20,7 +20,7 @@
 		<div class="sign">
   			<form action="" method="POST">
     			<fieldset>
-			<legend>Forgot your password ?</legend>
+					<legend>Forgot your password ?</legend>
       				<label for="name">Please enter your <u>Email</u>.<br>A reset password link<br>will be sent to your<br>email address.<br><br></label><input type="email" name="username" maxlength="64" required><br>
     			</fieldset>
     				<p style="text-align: center;"><input class="submit-btm" type="submit" value="Send"></p>

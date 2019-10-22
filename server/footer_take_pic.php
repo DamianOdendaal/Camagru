@@ -1,20 +1,29 @@
 
 <html>
 	<head>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<style>
+			fieldset {
+				float:center;
+				/* remove the border*/
+				text-align:center;
+			}
+		</style>
 	</head>
 	<body>
-		<table>
-			<tr>
-				<td></td>		<!--find icons to use to represent your filters -->
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table><br/>
-		<button> <i class="fas fa-camera"></i></button> <!--find a way to change the shape of your button -->
-		<br/></br>
+		<fieldset>
+			<table>
+				<tr>
+					<button><i class="fas fa-cannabis"  style = "font-size:40px;"></i></button>	&nbsp;	<!--try and figure the filters out -->
+					<button><i class="fab fa-java"  style = "font-size:40px;"></i></button> &nbsp;
+					<button><i class="fas fa-snowman"  style = "font-size:40px;"></i></button> &nbsp;
+					<button><i class="fas fa-chess-queen"  style = "font-size:40px;"></i></button>
+				</tr>
+			</table><br/>
+				<button><i class="fas fa-camera-retro" style = "font-size:60px;"></i> </button>
+		</fieldset>
+			<br/></br>
 		<!-- add a section here that allows you to chose a file that you would like to use if you dont wanna take a pic-->
 	</body>
 

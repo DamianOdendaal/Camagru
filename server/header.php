@@ -2,8 +2,13 @@
     <head>
         <style>
 		body {
-			background: url('https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat;
+			background: url('https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80') no-repeat;
 			background-size:cover;
+			background-position: center;
+		}
+		.header {
+			background-color: grey;
+			opacity: .8;
 		}
 		ul {
 			margin: 0px;
@@ -15,7 +20,7 @@
 			width: 200px;
 			height: 40px;
 			background-color:grey;
-			opacity: .8;
+			opacity: .7;
 			line-height: 40px;
 			text-align: center;
 			font-size: 20px;
@@ -34,6 +39,15 @@
 		}
 		ul li:hover ul li {
 			display: block
+		}
+		h1 {
+			text-align: center;
+		}
+		h4 {
+			font-size: 125%;
+		}
+		h4 a {
+			color: black;
 		}
         </style>
     </head>
