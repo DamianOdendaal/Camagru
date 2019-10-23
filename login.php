@@ -119,14 +119,14 @@ font-weight: bold;
       <input type="text" placeholder="Username" class="input-1" />
       <div class="overlap-text">
         <input type="password" placeholder="Password" class="input-2" />
-        <a href="#">Forgot?</a>
+        <a href="forgot_p.php">Forgot?</a>
       </div>
       <input type="button" value="Log in" class="btn" />
     </div>
   </div>
   <div class="sub-content">
     <div class="s-part">
-      Don't have an account?<a href="#">Sign up</a>
+      Don't have an account?<a href="sign_up.php">Sign up</a>
     </div>
   </div>
 </div>

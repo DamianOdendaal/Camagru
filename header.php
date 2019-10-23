@@ -60,7 +60,7 @@
                  <li><a href = "">My Gallery</a>
                 <li><a href = "">About us</a>
                     <ul>
-                        <li><a href = "">Our Team!</a></li>
+                        <li><a href = "members.php">Our Team!</a></li>
                         <li><a href = "">Camagru News!</a></li>
                         <li><a href = ""></a></li>
                 	</ul>

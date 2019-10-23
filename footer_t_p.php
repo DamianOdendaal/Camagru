@@ -21,8 +21,9 @@
 					<button><i class="fas fa-chess-queen"  style = "font-size:40px;"></i></button>
 				</tr>
 			</table><br/>
-				<button><i class="fas fa-camera-retro" style = "font-size:60px;"></i> </button>
+				<button><i class="fas fa-camera-retro" style = "font-size:60px;" id = "capture"></i> </button>
 		</fieldset>
+		<script src = "video.js"></script>
 			<br/></br>
 		<!-- add a section here that allows you to chose a file that you would like to use if you dont wanna take a pic-->
         <div style="background-color:#1EE2E2; text-align:center; padding:10px; margin-bottom:0%;">© copyright Camagru.com</div>
@@ -31,4 +32,3 @@
 </html>
 
 
-<!-- example to refer to https://github.com/vomnes/camagru/blob/master/README.md -->
