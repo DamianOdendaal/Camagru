@@ -12,12 +12,10 @@
                             navigator.mozGetUserMedia ||
                             navigator.msGetUserMedia;
 
-    var streamObj;
     navigator.getMedia({
         video: true,
         audio: false
     }, function(stream){
-        streamObj = stream;		// test without using the stream object here
         video.srcObject = stream;
         video.play()
     }, function(error){
@@ -25,9 +23,6 @@
     });
 
     function onCapture() {
-        console.log(canvas.width, canvas.height); // remember to remove these
-        console.log(canvas.width, canvas.height);
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
     }
 })();
-

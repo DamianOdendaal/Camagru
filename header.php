@@ -53,11 +53,11 @@
     </head>
             <div class = "header" style = "background-color: grey;">
                 <h1 style = "margin-top:1%;">Camagru</h1>
-                <h4><a href = "">Login</a> &nbsp <a href = "">Register</a></h4>
+                <h4><a href = "login.php">Login</a> &nbsp <a href = "sign_up.php">Register</a></h4>
             </div>
         <div class = "menu_bar">
             <ul>
-                <li class = "active" id = "login"><a href = "">Home</a></li>
+                 <li><a href = "">My Gallery</a>
                 <li><a href = "">About us</a>
                     <ul>
                         <li><a href = "">Our Team!</a></li>
@@ -65,7 +65,6 @@
                         <li><a href = ""></a></li>
                 	</ul>
                  </li>
-                 <li><a href = "">My Gallery</a>
                <li><a href = "https://web.whatsapp.com/">Contact us</a></li>
             </ul>
         </div><br/><br/><br/><br/>
