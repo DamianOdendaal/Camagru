@@ -1,5 +1,6 @@
 <html>
 	<head>
+
 		<style>
 		* {
   margin: 0px;
@@ -90,7 +91,6 @@ font-weight: bold;
   height: 40%;
   margin: 10px auto;
   padding: 20px 50px;
-  /* background-color:grey; */
 }
 
 .s-part {

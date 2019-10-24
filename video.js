@@ -5,7 +5,7 @@
     context = canvas.getContext('2d'),
     video = document.getElementById('video');
 
-    vendorUrl = window.URL || window.webkitURL;		// google 
+    vendorURL = window.URL || window.webkitURL;		// google 
 
     navigator.getMedia =    navigator.getUserMedia ||
                             navigator.webkitGetUserMedia ||
