@@ -4,7 +4,6 @@ this is for if you dont need to be logged in
 
 <?php
 	date_default_timezone_set('GMT+2');
-
 ?>
 
 <!DOCTYPE html>

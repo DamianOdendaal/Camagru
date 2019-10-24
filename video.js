@@ -25,10 +25,8 @@
     function onCapture() {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
     }
-    // function intoTable(){
-    //     if (onCapture){
-    //         document.write("<tr><td>" + video + "</tr></td>");
-    //     }
-    // }
+    function intoTable(){
+            document.write("<tr><td>" + context.drawImage(video, 0, 0, cavas.width, canvas.height) + "</tr></td>");
+    }
 })();
 
