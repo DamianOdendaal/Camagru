@@ -19,10 +19,9 @@
         </style>
     </head>
     <div class="booth">
-        <!-- <button id = "capture">ass</button> -->
         <video id = "video" autoplay>  </video>
         <canvas id = "canvas"></canvas>
     </div>
-    <script src = "video.js"></script>
+    <script src = "video.js"></script><br/>
 
 <html>    

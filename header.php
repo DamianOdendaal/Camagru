@@ -1,3 +1,5 @@
+
+
 <html>
     <head>
         <style>
@@ -61,8 +63,7 @@
                 <li><a href = "">About us</a>
                     <ul>
                         <li><a href = "members.php">Our Team!</a></li>
-                        <li><a href = "">Camagru News!</a></li>
-                        <li><a href = ""></a></li>
+                        <li><a href = "camagru_news.php">Camagru News!</a></li>
                 	</ul>
                  </li>
                <li><a href = "https://web.whatsapp.com/">Contact us</a></li>

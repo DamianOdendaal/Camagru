@@ -19,10 +19,16 @@
         video.srcObject = stream;
         video.play()
     }, function(error){
-        console.log('h');
+        console.log('error');
     });
 
     function onCapture() {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
     }
+    // function intoTable(){
+    //     if (onCapture){
+    //         document.write("<tr><td>" + video + "</tr></td>");
+    //     }
+    // }
 })();
+

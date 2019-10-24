@@ -7,9 +7,13 @@
 }
 
 body {
-  background-color: grey;
+  background: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size:cover;
+	width:100%;
+	height:100%;
+	font-size: 200%;
+	background-position: center;
 }
-
 #wrapper {
   width: 500px;
   height: 90%;
