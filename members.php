@@ -19,7 +19,8 @@
     <body>
         <h1>A Special thanks to the people who contributed to this project</h1>
         <h3>Enrico Radcliffe (enradcli)</h3>
-        <p> Enrico along with Terence the developers that focused a lot on the back end of this project, making it as interactive and simple as it was for you to enjoy</p>
+        <p> Enrico along with Terence the developers
+         that focused a lot on the back end of this project, making it as interactive and simple as it was for you to enjoy</p>
         <h3>Terence Philander (tphiland)</h3>
         <p> Terence along with Enrico are the developers that focused a lot on the back end of this project, making it as interactive and simple as it was for you to enjoy</p>
         <h3>Damian Odendaal (dodendaa)</h3>
