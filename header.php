@@ -59,7 +59,7 @@
             </div>
         <div class = "menu_bar">
             <ul>
-                 <li><a href = "">My Gallery</a>
+                 <li><a href = "filters.php">My Gallery</a>
                 <li><a href = "">About us</a>
                     <ul>
                         <li><a href = "members.php">Our Team!</a></li>
