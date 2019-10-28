@@ -9,6 +9,9 @@
 				/* remove the border*/
 				text-align:center;
 			}
+			bdi {
+				float:right;
+			}
 		</style>
 	</head>
 	<body>
@@ -26,7 +29,7 @@
 		<script src = "video.js"></script>
 			<br/></br>
 		<!-- add a section here that allows you to chose a file that you would like to use if you dont wanna take a pic-->
-        <div style="background-color:#1EE2E2; text-align:center; padding:10px; margin-bottom:0%;">© copyright Camagru.com</div>
+        <div style="background-color:#1EE2E2; text-align:center; padding:10px; margin-bottom:0%;">© copyright Camagru.com <bdi></bdi>></div>
 	</body>
 
 </html>
