@@ -22,6 +22,6 @@
         <video id = "video" autoplay>  </video>
         <canvas id = "canvas"></canvas>
     </div>
-    <script src = "video.js"></script><br/>
+    <?php include('footer_t_p.php') ?>
 
 <html>    

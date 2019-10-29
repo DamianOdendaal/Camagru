@@ -13,11 +13,11 @@
                             navigator.msGetUserMedia;
 
     navigator.getMedia({
-        video: false,
+        video: true,
         audio: false
     }, function(stream){
         video.srcObject = stream;
-        video.play()
+        video.play();
     }, function(error){
         console.log('error');
     });
@@ -25,7 +25,7 @@
     function onCapture() {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
     }
-    function intoTable(){
-            document.write("<tr><td>" + context.drawImage(video, 0, 0, cavas.width, canvas.height) + "</td></tr>");
-    }
+    // function intoTable(){
+    //         document.write("<tr><td>" + context.drawImage(video, 0, 0, cavas.width, canvas.height) + "</td></tr>");
+    // }
 })();
