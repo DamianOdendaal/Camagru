@@ -22,7 +22,7 @@
         $connect->exec($sql); // this stores the values into the database table (images)
 
 	// now we move the images to the images dir
-	if (move_uploaded_file($_FILES['temp_name']['name'], $target)){ 				//try tmp_name if you get any bugs
+	if (move_uploaded_file($_FILES['image']['temp_name'], $target)){ 				//try tmp_name if you get any bugs
 		$message = "Image has successfully uploaded";
     }
 	else {
