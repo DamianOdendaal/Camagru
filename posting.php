@@ -71,6 +71,19 @@
     </head>
     <body>
         <div id="content">
+	<!-- displaying the images from the database -->
+	<?php
+        $connect = new PDO($first_param, $name, $password);
+		$sqll = 'SELECT * FROM images';
+		foreach ($connect->query($sql) as $pic){
+			echo "<div id = "img_div">";
+				echo "<img src = 'images/".$row['image']."'>";
+				echo "<p>".$row['text']."</p>";
+			echo "</div>";
+		}											// if you come across any bugs try to change this back to sql 
+	
+
+	?>
             <form method = "post" action="posting.php" enctype = "multipart/form-data">
                 <input type="hidden" name = "size" value="1000000">
                     <div>
