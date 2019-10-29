@@ -1,4 +1,6 @@
 <?php
+	
+	$message = "";
 
     $name = root;
     $password = Damian;
@@ -19,11 +21,15 @@
 
         $connect->exec($sql); // this stores the values into the database table (images)
 
-        // continue watching from 6:10 mark in the video 
-
+	// now we move the images to the images dir
+	if (move_uploaded_file($_FILES['temp_name']['name'], $target)){ 				//try tmp_name if you get any bugs
+		$message = "Image has successfully uploaded";
     }
+	else {
+		$message = "There is a problem loading your image."
+	}
 
-                                                                            // if anything is breaking for no good reason then check the occurences of image and change them to images 
+                                                                  // if anything is breaking for no good reason then check the occurences of image and change them to images 
 ?>
 
 
