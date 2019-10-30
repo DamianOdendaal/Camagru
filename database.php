@@ -1,6 +1,8 @@
 <?php
-define("DB_HOST", "localhost");
-define("DB_USER", "root");
-define("DB_PASS", "Damian");
-define("DB_NAME", "images");
+    try {
+        $db = new PDO('mysql:host=localhost;dbname=camagru_users', 'root', 'Damian');
+    }
+    catch (exception $e){
+        echo "An error as occurred";
+    }
 ?>
