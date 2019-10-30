@@ -20,7 +20,7 @@
 		ul li {
 			float:left;
 			width: 200px;
-			height: 40px;
+			height: 37px;
 			background-color:grey;
 			opacity: .7;
 			line-height: 40px;
@@ -35,6 +35,7 @@
 		ul li a:hover {
 			display:block;
 			background-color:green;
+			height: 37px;
 		}
 		ul li ul li {
 			display: none;
@@ -47,6 +48,8 @@
 		}
 		h4 {
 			font-size: 125%;
+			text-align:right;
+			margin-right: 1%;
 		}
 		h4 a {
 			color: black;
@@ -56,10 +59,9 @@
             <div class = "header" style = "background-color: grey;">
                 <h1 style = "margin-top:1%;">Camagru</h1>
                 <h4><a href = "login.php">Login</a> &nbsp <a href = "sign_up.php">Register</a></h4>
-            </div>
         <div class = "menu_bar">
             <ul>
-                 <li><a href = "filters.php">My Gallery</a>
+                 <li><a href = "posting.php">My Gallery</a>
                 <li><a href = "">About us</a>
                     <ul>
                         <li><a href = "members.php">Our Team!</a></li>
@@ -68,6 +70,7 @@
                  </li>
                <li><a href = "https://web.whatsapp.com/">Contact us</a></li>
             </ul>
-        </div><br/><br/><br/><br/>
+        </div><br/><br/>
+            </div>
 </html>
 

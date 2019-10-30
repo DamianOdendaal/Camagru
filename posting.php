@@ -2,31 +2,31 @@
 	
 	$message = "";
 
-    $name = root;
-    $password = Damian;
-    $first_param = 'mysql:host=localhost;dbname=images';
+    $name = "root";
+    $password = "Damian";
+    $first_param = "mysql:host=localhost;dbname=images";
     // condition to check if the submit button was pressed, if its pressed we give it the path to store the uploaded pic
     if (isset($_POST['upload'])){
         $target = "images/".basename($_FILES['image']['name']);
 
         // connect to the database
-        $connect = new PDO($first_param, $name, $password);
+        $connect = new PDO($first_param, $name, $password);                                                                     //come here and add the database name
 
         // get all of the data that was submitted from the form
 
         $images = $_FILES['image']['name'];
         $text = $_POST['text'];
 
-        $sql = "INSERT INTO images (image, text) VALUES ('$image', '$text')";
+        $sql = "INSERT INTO images (image, text) VALUES ('$images', '$text')";
 
         $connect->exec($sql); // this stores the values into the database table (images)
 
 	// now we move the images to the images dir
-	if (move_uploaded_file($_FILES['image']['temp_name'], $target)){ 				//try tmp_name if you get any bugs
+	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)){ 				//try tmp_name if you get any bugs
 		$message = "Image has successfully uploaded";
     }
 	else {
-		$message = "There is a problem loading your image."
+		$message = "There is a problem loading your image.";
 	}
 
                                                                   // if anything is breaking for no good reason then check the occurences of image and change them to images 
@@ -75,10 +75,10 @@
 	<?php
         $connect = new PDO($first_param, $name, $password);
 		$sqll = 'SELECT * FROM images';
-		foreach ($connect->query($sql) as $pic){
-			echo "<div id = "img_div">";
-				echo "<img src = 'images/".$row['image']."'>";
-				echo "<p>".$row['text']."</p>";
+		while ($pic = $connect->query($sql))
+			echo "<div id = 'img_div'>";                      // if bugs look here first
+				echo "<img src = 'images/".$pic['image']."'>";
+				echo "<p>".$pic['text']."</p>";
 			echo "</div>";
 		}											// if you come across any bugs try to change this back to sql 
 	
@@ -98,4 +98,4 @@
             </form>
         </div>
     </body>
-</html> 
+</html>
