@@ -35,12 +35,11 @@
 			user_name VARCHAR(255) UNIQUE NOT NULL,
 			email VARCHAR(255) UNIQUE NOT NULL,
 			password TEXT NOT NULL,
-			token VARCHAR(32) NOT NULL,
 			activated BOOLEAN NOT NULL,
-			notifications BOOLEAN NOT NULL	
+			notification_recieved BOOLEAN NOT NULL	
 		)";
 		$conn->exec($sql);
-        echo "Table 'users' created successfully<br/>";
+        echo "The users table was successfully created<br/>";
         
 
 		// create table images that references user with a foreign key
@@ -54,6 +53,35 @@
 			date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL	
 		)";
 		$conn->exec($sql);
-		echo "Table 'images' created successfully<br/>";
+		echo "The images table was successfully created<br/>";
+
+		// create table comments that will reference user with a foreign key
+
+		$sql = "CREATE TABLE IF NOT EXISTS comments
+		(
+			comment_id INT(255) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+			user_id INT(255) NOT NULL,
+			FOREIGN KEY (user_id) REFERENCES users(user_id),
+			comment_date DATETIME NOT NULL,
+			comment TEXT NOT NULL
+		)";
+		$conn->exec($sql);
+		echo "The comments table was successfully created";
+
+	// create table likes that will reference user with a foreign key
+
+		$sql = "CREATE TABLE IF NOT EXISTS likes
+		(
+			like_id INT(255) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+			user_id INT(255) NOT NULL,
+			FOREIGN KEY (user_id) REFERENCES users(user_id),
+			like_date DATETIME NOT NULL,
+			like_count INT NOT NULL
+		)";
+		$conn->exec($sql);
+		echo "The likes table was successfully created";
+
+
+
 
 ?>
