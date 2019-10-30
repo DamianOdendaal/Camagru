@@ -1,10 +1,6 @@
 <?php
-    CREATE DATABASE images;
-    CREATE TABLE images (
-    picID int,
-    imgSrc varchar,
-    imgUid int - autoincrement,
-    imgComments varchar(255),
-    imgLikes - int,
-    imgCaption - text
-);
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "Damian");
+define("DB_NAME", "images");
+?>
