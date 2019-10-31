@@ -1,5 +1,5 @@
 <?php
-    // require "database.php";
+    require "database.php";
     // $DB_INFO = "mysql:host=".DB_HOST.";dbname=".DB_NAME;
     // try{
     //     $connect = new PDO($DB_INFO,DB_USER,DB_PASS);
@@ -17,7 +17,7 @@
 
     try 
 	{
-		$conn = new PDO($DB_DNS, $DB_USER, $DB_PASSWORD);
+		$conn = new PDO($DB_SERVER, $DB_USER, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$sql = "CREATE DATABASE IF NOT EXISTS $DB_NAME";
 		$conn->exec($sql);
@@ -36,7 +36,7 @@
 			user_name VARCHAR(255) UNIQUE NOT NULL,
 			email VARCHAR(255) UNIQUE NOT NULL,
 			password TEXT NOT NULL,
-			activated BOOLEAN NOT NULL,
+			activated BOOLEAN DEFAULT false,
 			notification_recieved BOOLEAN NOT NULL	
 		)";
 		$conn->exec($sql);
@@ -63,7 +63,7 @@
 			comment_id INT(255) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			user_id INT(255) NOT NULL,
 			FOREIGN KEY (user_id) REFERENCES users(user_id),
-			comment_date DATETIME NOT NULL,
+			date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL	
 			comment TEXT NOT NULL
 		)";
 		$conn->exec($sql);
@@ -76,7 +76,7 @@
 			like_id INT(255) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			user_id INT(255) NOT NULL,
 			FOREIGN KEY (user_id) REFERENCES users(user_id),
-			like_date DATETIME NOT NULL,
+			like_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL	
 			like_count INT NOT NULL
 		)";
 		$conn->exec($sql);

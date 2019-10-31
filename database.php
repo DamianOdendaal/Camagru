@@ -1,8 +1,7 @@
 <?php
-    try {
-        $db = new PDO('mysql:host=localhost;dbname=camagru_users', 'root', 'Damian');
-    }
-    catch (exception $e){
-        echo "An error as occurred";
-    }
+      $DB_NAME = "camagru_db";
+      $DB_SERVER = "mysql:host=localhost";
+      $DB_SERVER_DB = "mysql:host=localhost;dbname=".$DB_NAME;
+      $DB_USER = "root";
+      $DB_PASSWORD = "Damian";
 ?>
