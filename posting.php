@@ -1,16 +1,13 @@
 <?php
-	
+	include ('database.php');
 	$message = "";
 
-    $name = "root";
-    $password = "Damian";
-    $first_param = "mysql:host=localhost;dbname=images";
     // condition to check if the submit button was pressed, if its pressed we give it the path to store the uploaded pic
     if (isset($_POST['upload'])){
         $target = "images/".basename($_FILES['image']['name']);
 
         // connect to the database
-        $connect = new PDO($first_param, $name, $password);                                                                     //come here and add the database name
+        $connect = new PDO($DB_SERVER, $DB_USER, $DB_PASSWORD);                                                                     //come here and add the database name
 
         // get all of the data that was submitted from the form
 
