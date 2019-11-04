@@ -65,21 +65,21 @@
         <meta name="viewport" images="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div id="images">
-	<!-- displaying the images from the database -->
+        <!-- <div id="images">
+	     displaying the images from the database
 	<?php
-        $connect = new PDO($DB_SERVER, $DB_USER, $DB_PASSWORD);
-		$sql = 'SELECT * FROM images';
-        while ($pic = $connect->query($sql))
-        {
-			echo "<div id = 'img_div'>";                      // if bugs look here first
-				echo "<img src = 'images/".$pic['image']['name']."'>";
-				echo "<p>".$pic['text']."</p>";
-			echo "</div>";
-		}											// if you come across any bugs try to change this back to sql 
+        // $connect = new PDO($DB_SERVER, $DB_USER, $DB_PASSWORD);
+		// $sql = 'SELECT * FROM images';
+        // while ($pic = $connect->query($sql))
+        // {
+		// 	echo "<div id = 'img_div'>";                      
+		// 		echo "<img src = 'images/".$pic['image']['name']."'>";
+		// 		echo "<p>".$pic['text']."</p>";
+		// 	echo "</div>";
+		// }											
 	
 	?>
-        </div>
+        </div> 
             <form method = "post" action="posting.php" enctype = "multipart/form-data">
                 <input type="hidden" name = "size" value="1000000">
                     <div>
