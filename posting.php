@@ -79,6 +79,7 @@
 		}											// if you come across any bugs try to change this back to sql 
 	
 	?>
+        </div>
             <form method = "post" action="posting.php" enctype = "multipart/form-data">
                 <input type="hidden" name = "size" value="1000000">
                     <div>
@@ -89,6 +90,7 @@
                     </div>
                     <div>
                         <input type="submit" name = "upload" value = "Upload Image">
+                        <a href = "gallery.php"><input type="submit" name = "upload" value = "View Images"></a>
                     </div>
             </form>
         </div>
