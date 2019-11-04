@@ -63,11 +63,11 @@
 			comment_id INT(255) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			user_id INT(255) NOT NULL,
 			FOREIGN KEY (user_id) REFERENCES users(user_id),
-			date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL	
+			date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 			comment TEXT NOT NULL
 		)";
 		$conn->exec($sql);
-		echo "The comments table was successfully created";
+		echo "The comments table was successfully created<br/>";
 
 	// create table likes that will reference user with a foreign key
 
@@ -76,11 +76,11 @@
 			like_id INT(255) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			user_id INT(255) NOT NULL,
 			FOREIGN KEY (user_id) REFERENCES users(user_id),
-			like_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL	
+			like_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,	
 			like_count INT NOT NULL
 		)";
 		$conn->exec($sql);
-		echo "The likes table was successfully created";
+		echo "The likes table was successfully created<br/>";
 }
 catch(PDOException $e){
 	echo $sql . "<br>" . $e->getMessage();

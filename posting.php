@@ -17,15 +17,13 @@
         $sql = "INSERT INTO images (image, text) VALUES ('$images', '$text')";
 
         $connect->exec($sql); // this stores the values into the database table (images)
+    }
 
 	// now we move the images to the images dir
-	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)){ 				//try tmp_name if you get any bugs
+	if (move_uploaded_file($_FILES['image']['tmp_name'], $target))				//try tmp_name if you get any bugs
 		$message = "Image has successfully uploaded";
-    }
-	else {
+	else 
 		$message = "There is a problem loading your image.";
-	}
-
                                                                   // if anything is breaking for no good reason then check the occurences of image and change them to images 
 ?>
 
@@ -72,14 +70,14 @@
 	<?php
         $connect = new PDO($DB_SERVER, $DB_USER, $DB_PASSWORD);
 		$sql = 'SELECT * FROM images';
-		while ($pic = $connect->query($sql))
+        while ($pic = $connect->query($sql))
+        {
 			echo "<div id = 'img_div'>";                      // if bugs look here first
-				echo "<img src = 'images/".$pic['image']."'>";
+				echo "<img src = 'images/".$pic['image']['name']."'>";
 				echo "<p>".$pic['text']."</p>";
 			echo "</div>";
 		}											// if you come across any bugs try to change this back to sql 
 	
-
 	?>
             <form method = "post" action="posting.php" enctype = "multipart/form-data">
                 <input type="hidden" name = "size" value="1000000">
