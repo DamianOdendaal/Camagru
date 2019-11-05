@@ -1,20 +1,5 @@
 <?php
-    require "database.php";
-    // $DB_INFO = "mysql:host=".DB_HOST.";dbname=".DB_NAME;
-    // try{
-    //     $connect = new PDO($DB_INFO,DB_USER,DB_PASS);
-    //     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-    //     echo "Succesfully connected to the database";
-    // }catch(PDOExeption $exeption) { // PD0Expetion handles the connection error in the database 
-    //     die("unable to connect to the database");
-    // }
-    // session_start();
-    // include ("database.php");
-    // $statement = $db->prepare("INSERT INTO `images` (`imgId`, `imgSrc`, `imgOwner`, `imgLikes`, `imgComments`) VALUES (?, ?, ?, ?)");
-
-    // $statement->execute();
-    // header("location: http://localhost:8081/camagru/confirmation.php");
-
+    require("database.php");
     try 
 	{
 		$conn = new PDO($DB_SERVER, $DB_USER, $DB_PASSWORD);
@@ -50,7 +35,7 @@
 			image_id INT(255) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			user_id INT(255) NOT NULL,
 			FOREIGN KEY (user_id) REFERENCES users(user_id), 
-			content LONGTEXT CHARACTER SET utf8 NOT NULL,
+			image LONGTEXT CHARACTER SET utf8 NOT NULL,
 			date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL	
 		)";
 		$conn->exec($sql);
