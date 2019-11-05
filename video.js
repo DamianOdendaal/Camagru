@@ -27,8 +27,8 @@
         console.log(canvas.toDataURL());
     }
 
-    function Stickers() {
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        console.log(canvas.toDataURL());
-    }
+    // function Stickers() {
+    //     context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    //     console.log(canvas.toDataURL());
+    // }
 })();

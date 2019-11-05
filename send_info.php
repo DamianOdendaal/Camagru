@@ -9,8 +9,12 @@
     $result->bindValue(3, $email);
     $result->bindValue(4, 'inactive');
     $result->execute();
-    $to = $email;
-    $msg = "http://localhost:8080/camagru/verified.php";
-    mail($to, "click below", $msg);
+
+
+    $message = "http://localhost:8080/camagru/verified.php";
+    $subject = "Camagru Verification link";
+
+
+    mail($email, $subject, $message);
     header("location: index.php");
 ?>
