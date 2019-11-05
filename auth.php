@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
     session_start();
     include ("connect.php");
     $result = $DB_NAME->query("SELECT username, password FROM users");
@@ -16,4 +16,4 @@
         }
         $x++;
     }
-?> -->
+?>
