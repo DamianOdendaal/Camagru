@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 </head>
@@ -8,4 +8,4 @@
         <input type="submit" name="submit">
     </form>
 </body>
-</html> -->
+</html>
