@@ -114,20 +114,21 @@ font-weight: bold;
 	</head>
 	<body>
 		<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono" rel="stylesheet">
-
 <div id="wrapper">
   <div class="main-content">
     <div class="header">
 		<span>Camagru</span>
     </div>
+    <form action="auth.php" method="post">
     <div class="l-part">
-      <input type="text" placeholder="Username" class="input-1" />
+      <input type="text" name="username" placeholder="Username" class="input-1" />
       <div class="overlap-text">
-        <input type="password" placeholder="Password" class="input-2" />
+        <input type="password" name="password" placeholder="Password" class="input-2" />
         <a href="forgot_p.php">Forgot?</a>
       </div>
-      <input type="button" value="Log in" class="btn" />
+      <input type="submit" name="submit" value="Log in" class="btn" />
     </div>
+    </form>
   </div>
   <div class="sub-content">
     <div class="s-part">

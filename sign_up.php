@@ -119,14 +119,15 @@ font-weight: bold;
     <div class="header">
 		<span>Camagru</span>
     </div>
+    <form action="send_info.php" method="post">
     <div class="l-part">
-      <input type="text" placeholder="First Name" class="input-1" />
-      <input type="text" placeholder="Last Name" class="input-1" />
-      <input type="text" placeholder="Username" class="input-1" />
-      <input type="text" placeholder="Password" class="input-1" />
-        <input type="password" placeholder="Re-enter Password" class="input-2" /><br/><br/>
-      <input type="button" value="Log in" class="btn" />
+    <input type="text" name="username" placeholder="Username" class="input-1" />
+      <input type="password" name="password" placeholder="Password" class="input-1" />
+      <input type="email" name="email" placeholder="Email" class="input-1" />
+        <!-- <input type="password" placeholder="Re-enter Password" class="input-2" /><br/><br/> -->
+      <input type="submit" name="submit" value="Sign Up" class="btn" />
     </div>
+    </form>
   </div>
 </div>
 	</body>
