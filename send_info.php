@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
     include ("connect.php");
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -13,4 +13,4 @@
     $msg = "http://localhost:8080/camagru/verified.php";
     mail($to, "click below", $msg);
     header("location: index.php");
-?> -->
+?>
