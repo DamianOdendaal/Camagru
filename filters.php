@@ -31,13 +31,13 @@
       var canvas = document.getElementById("myCanvas");
       var canvas1 = document.getElementById("myCanvas1");
       var big = document.getElementById("big");
+      var star = document.getElementBytagName("polygon");
       var ctx = canvas.getContext("2d");
       var ctx1 = canvas1.getContext("2d");
-      var img = document.getElementById("scream");
-      var circle = document.getElementById("Circle");
+      // var img = document.getElementById("scream");
       var big = document.getElementById("big");
       ctx.drawImage(big, 0 ,0, big.width, big.height);
-      ctx1.drawImage(circle, 100, 10, 40, 40, 100 ,30, 50 ,60);
+      ctx1.drawImage(star, 0, 0, star.width, star.height);
     };
 </script>
 </body>
