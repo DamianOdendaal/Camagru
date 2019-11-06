@@ -19,7 +19,6 @@
       var big = document.getElementById("big");
       ctx.drawImage(big, 0 ,0, big.width, big.height);
       ctx.drawImage(img, 100, 10, 40, 40, 100 ,30, 50 ,60);
-      // fix the filter b0ss
     };
 </script>
 </body>

@@ -27,6 +27,7 @@
                  <li><a href = "video.php">Take picture</a>
                 <li><a href = "">Taken pics</a></li>
                <li><a href = "">Local Gallery</a></li>
+               <li><a href = "filters.php">Filters test</a></li>
             </ul>
         </body>
 </html>
