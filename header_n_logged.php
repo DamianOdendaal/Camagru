@@ -49,7 +49,7 @@
 		h4 {
 			font-size: 125%;
 			text-align:right;
-			margin-right: 1%;
+			margin-right: 3%;
 		}
 		h4 a {
 			color: black;

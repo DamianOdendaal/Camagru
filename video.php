@@ -21,7 +21,7 @@
     <div class="booth">
         <video id = "video" autoplay>  </video>
         <canvas id = "canvas"></canvas>
-    </div>
+    </div></br>
     <?php include('footer_t_p.php') ?>
 
 <html>    

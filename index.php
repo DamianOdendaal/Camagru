@@ -1,4 +1,3 @@
 <?PHP
-    include ('header.php');
-    include ('video.php');
+    include ('header_n_logged.php');
 ?>
