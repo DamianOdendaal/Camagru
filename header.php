@@ -61,7 +61,7 @@
                 <h4><a href = "login.php">Login</a> &nbsp <a href = "sign_up.php">Register</a></h4>
         <div class = "menu_bar">
             <ul>
-                 <li><a href = "posting_new.php">My Gallery</a>
+                 <li><a href = "gallery.php">My Gallery</a>
                 <li><a href = "">About us</a>
                     <ul>
                         <li><a href = "members.php">Our Team!</a></li>

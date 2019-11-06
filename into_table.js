@@ -1,15 +1,15 @@
-function intoTable(){
-    var x = document.createElement("TABLE");
-    x.setAttribute("id", "myTable");
-    document.body.appendChild(x);
+function intoTable($image_path){
+    var table = document.createElement("TABLE");
+    table.setAttribute("id", "myTable");
+    document.body.appendChild(table);
   
-    var y = document.createElement("TR");
-    y.setAttribute("id", "myTr");
-    document.getElementById("myTable").appendChild(y);
+    var row = document.createElement("TR");
+    row.setAttribute("id", "myTr");
+    document.getElementById("myTable").appendChild(row);
   
-    var z = document.createElement("TD");
-    var t = document.createElement("IMG");
-    t.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsGd_YwYO_jSZuhD5Ll4XI8tYz-IRJuAsc9XhBe34HYjUG_Uey&s");
-    z.appendChild(t);
-    document.getElementById("myTr").appendChild(z);
+    var data = document.createElement("TD");
+    var image = document.createElement("IMG");
+    image.setAttribute("src", $image_path);
+    data.appendChild(image);
+    document.getElementById("myTr").appendChild(data);
 }
