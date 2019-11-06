@@ -2,7 +2,7 @@
     var captureButton = document.getElementById('capture');
     captureButton.addEventListener("click", onCapture);	
     var canvas = document.getElementById('canvas'),
-    context = canvas.getContext('2d'),
+    context = canvas.getContext('2d'),                  
     video = document.getElementById('video');
 
     // vendorURL = window.URL || window.webkitURL;	
@@ -24,7 +24,7 @@
     
     function onCapture() {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        console.log(canvas.toDataURL());
+        // console.log(canvas.toDataURL());
     }
 
     // function Stickers() {
