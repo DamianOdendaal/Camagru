@@ -3,8 +3,12 @@
     captureButton.addEventListener("click", onCapture);	
     var canvas = document.getElementById('canvas'),
     context = canvas.getContext('2d'),
-    svg = document.getElementById('svg'),                  
+    svg = document.getElementById('svg'),  
+    star = document.getElementById('star'),
+    smart = document.getElementById('smart'),
+    crown = document.getElementById('crown'),                
     video = document.getElementById('video');
+    star.addEventListener("mouseover", Stickers);
 
     // vendorURL = window.URL || window.webkitURL;	
 
@@ -29,7 +33,8 @@
     }
     
     function Stickers() {
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        // context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        video.play();
         context.drawImage(svg, 0, 0, svg.width , svg.height);
     }
 })();
