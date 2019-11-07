@@ -56,7 +56,7 @@
     </head>
             <div class = "header" style = "background-color: grey;">
                 <h1 style = "margin-top:1%;">Camagru</h1>
-                <h4><a href = "login.php">Login</a> &nbsp <a href = "sign_up.php">Register</a></h4>
+                <h4><a href = ".php">Logout</a></h4>          <!--direct to a page where you destroy session -->
         <div class = "menu_bar">
             <ul>
                  <li><a href = "gallery.php">My Gallery</a>
@@ -71,4 +71,3 @@
         </div><br/><br/>
             </div>
 </html>
-

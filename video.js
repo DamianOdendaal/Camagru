@@ -37,4 +37,18 @@
         video.play();
         context.drawImage(svg, 0, 0, svg.width , svg.height);
     }
+    function drawPattern(){
+        var svgns = "http://www.w3.org/2000/svg",
+        container = document.getElementById( 'cont' );
+        for (var x = 0; x < 500; x += 20) {
+            for (var y = 0; y < 300; y += 50) {
+               var circle = document.createElementNS(svgns, 'circle');
+               circle.setAttributeNS(null, 'cx', x);
+               circle.setAttributeNS(null, 'cy', y);
+               circle.setAttributeNS(null, 'r', 50);
+               circle.setAttributeNS(null, 'style', 'fill: none; stroke: purple; stroke-width: 1px; opacity: 1;' );
+               container.appendChild(circle);
+            }
+        }
+    }
 })();
