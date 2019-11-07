@@ -5,7 +5,7 @@
     if (isset($_POST['upload'])){
         $target = "images/".basename($_FILES['image']['name']);
         // connect to the database
-        $connect = new PDO($DB_SERVER, $DB_USER, $DB_PASSWORD);                                                                     //come here and add the database name
+        $connect = new PDO($DB_SERVER, $DB_USER, $DB_PASSWORD);                                                                 
         // get all of the data that was submitted from the form
         $images = $_FILES['image']['name'];
         $text = $_POST['text'];
@@ -13,7 +13,7 @@
         $connect->exec($sql); // this stores the values into the database table (images)
     }
 	// now we move the images to the images dir
-	if (move_uploaded_file($_FILES['image']['tmp_name'], $target))				//try tmp_name if you get any bugs
+	if (move_uploaded_file($_FILES['image']['tmp_name'], $target))
 		$message = "Image has successfully uploaded";
 	else 
 		$message = "There is a problem loading your image.";
