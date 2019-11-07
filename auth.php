@@ -11,7 +11,7 @@
             if ($array[$x]['password'] === $_POST['password'])
             {
                 echo "success";
-                //header("location: loggedon.php");
+                header("location: heaeder.php");
             }
         }
         $x++;

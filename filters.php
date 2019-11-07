@@ -19,14 +19,6 @@
     <canvas id="myCanvas" width="210" height="279" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
   <canvas id="myCanvas1" width="210" height="279" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
 
- 
-
-  <svg id = "svg" height="210" width="500">
-  <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:black;stroke:black;stroke-width:3;fill-rule:nonzero;"/>
-    Sorry, your browser does not support inline SVG.
-  </svg>
-
-
   <!-- <script>
     window.onload = function() {
       var canvas = document.getElementById("myCanvas");

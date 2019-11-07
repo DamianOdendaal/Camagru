@@ -1,17 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+<html>
 <body>
-<div class="topnav" style="color: pink;">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
+
+<svg id="cont"></svg>
+
+<script>
+
+    var svgns = "http://www.w3.org/2000/svg",
+    container = document.getElementById( 'cont' );
+for (var x = 0; x < 500; x += 50) {
+    for (var y = 0; y < 300; y += 50) {
+        var circle = document.createElementNS(svgns, 'circle');
+        circle.setAttributeNS(null, 'cx', x);
+        circle.setAttributeNS(null, 'cy', y);
+        circle.setAttributeNS(null, 'r', 50);
+        circle.setAttributeNS(null, 'style', 'fill: none; stroke: blue; stroke-width: 1px;' );
+        container.appendChild(circle);
+    }
+}
+
+
+
+</script>
+
 </body>
 </html>

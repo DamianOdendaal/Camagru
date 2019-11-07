@@ -17,7 +17,7 @@
 		<fieldset>
 			<table>
 				<tr>
-					<button><i id = "star" class="far fa-star"  style = "font-size:40px;"></i></button>	&nbsp;	
+					<button><i id = "star" class="far fa-circle"  style = "font-size:40px;"></i></button>	&nbsp;	
 					<button><i id = "smart" class="fab fa-java"  style = "font-size:40px;"></i></button> &nbsp;
 					<button><i id = "" class="fas fa-snowman"  style = "font-size:40px;"></i></button> &nbsp;
 					<button><i id = "crown" class="fas fa-chess-queen"  style = "font-size:40px;"></i></button>
