@@ -11,7 +11,7 @@
             if ($array[$x]['password'] === $_POST['password'])
             {
                 echo "success";
-                header("location: heaeder.php");
+                header("location: header_logged.php");
             }
         }
         $x++;

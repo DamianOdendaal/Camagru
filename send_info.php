@@ -16,5 +16,8 @@
 
 
     mail($email, $subject, $message);
-    header("location: index.php");
+    header("location: .php");
+
+    // create a page that will tell you that you have a confirmation email
+
 ?>
