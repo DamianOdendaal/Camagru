@@ -17,10 +17,10 @@
 		<fieldset>
 			<table>
 				<tr>
-					<button><i class="fas fa-cannabis"  style = "font-size:40px;"></i></button>	&nbsp;	<!--try and figure the filters out -->
-					<button><i class="fab fa-java"  style = "font-size:40px;"></i></button> &nbsp;
-					<button><i class="fas fa-snowman"  style = "font-size:40px;"></i></button> &nbsp;
-					<button><i class="fas fa-chess-queen"  style = "font-size:40px;"></i></button>
+					<button><i id = "star" class="far fa-star"  style = "font-size:40px;"></i></button>	&nbsp;	
+					<button><i id = "smart" class="fab fa-java"  style = "font-size:40px;"></i></button> &nbsp;
+					<button><i id = "" class="fas fa-snowman"  style = "font-size:40px;"></i></button> &nbsp;
+					<button><i id = "crown" class="fas fa-chess-queen"  style = "font-size:40px;"></i></button>
 				</tr>
 			</table><br/>
 				<button><i class="fas fa-camera-retro" style = "font-size:60px;" id = "capture"></i> </button>

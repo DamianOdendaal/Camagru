@@ -2,7 +2,8 @@
     var captureButton = document.getElementById('capture');
     captureButton.addEventListener("click", onCapture);	
     var canvas = document.getElementById('canvas'),
-    context = canvas.getContext('2d'),                  
+    context = canvas.getContext('2d'),
+    svg = document.getElementById('svg'),                  
     video = document.getElementById('video');
 
     // vendorURL = window.URL || window.webkitURL;	
@@ -26,9 +27,9 @@
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
         // console.log(canvas.toDataURL());
     }
-
+    
     function Stickers() {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        // console.log(canvas.toDataURL());
+        context.drawImage(svg, 0, 0, svg.width , svg.height);
     }
 })();

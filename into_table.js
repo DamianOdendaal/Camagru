@@ -11,3 +11,4 @@ function intoTable($image_path){
     data.appendChild(image);
     row.appendChild(data);
 }
+

@@ -21,12 +21,13 @@
 
  
 
-  <svg height="210" width="500">
+  <svg id = "svg" height="210" width="500">
   <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:black;stroke:black;stroke-width:3;fill-rule:nonzero;"/>
     Sorry, your browser does not support inline SVG.
   </svg>
 
-  <script>
+
+  <!-- <script>
     window.onload = function() {
       var canvas = document.getElementById("myCanvas");
       var canvas1 = document.getElementById("myCanvas1");
@@ -39,6 +40,7 @@
       ctx.drawImage(big, 0 ,0, big.width, big.height);
       ctx1.drawImage(star, 0, 0, star.width, star.height);
     };
-</script>
+</script> -->
+    <script scr = "video.js"></script>
 </body>
 </html>
