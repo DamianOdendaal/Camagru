@@ -16,7 +16,7 @@
 
 
     mail($email, $subject, $message);
-    header("location: .php");
+    header("location: success_verified.php");
 
     // create a page that will tell you that you have a confirmation email
 
