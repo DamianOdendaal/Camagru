@@ -4,6 +4,11 @@
         <title>Verified</title>
         <link rel="stylesheet" href="stylesheet.css">
         <style>
+         body {
+                background: url('https://images.unsplash.com/photo-1574009183716-a8f34cfffc75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat;
+                background-size: cover;
+                /* background-position: center; */
+            }
             .confirm {
                 font-family: monospace;
                 color: aliceblue;
@@ -30,12 +35,11 @@
     </head>
     <body>
         <header>
-            <!-- <span class="header">CAMAGRU</span> -->
         </header>
         <section class="confirm">
             <span class="text">Success!</span>
             <p class="text_2">Congratulations. You have successfully verified your Email.</p><br/>
-            <a href="login.php" class = "link">Click here to go back to Camagru</a>
+            <a href="login.php" class = "link"><button>Click here to go back to Camagru</button></a>
         </section>
     </body>
 </html>
