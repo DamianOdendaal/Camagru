@@ -1,142 +1,92 @@
+ <!DOCTYPE html>
 <html>
-	<head>
-
-		<style>
-		* {
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  background: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-  background-size:cover;
-	width:100%;
-	height:100%;
-	font-size: 200%;
-	background-position: center;
-}
-
-#wrapper {
-  width: 500px;
-  height: 50%;
-  overflow: hidden;
-  border: 0px solid #000;
-  margin: 50px auto;
-  padding: 10px;
-}
-
-.main-content {
-  width: 250px;
-  height: 40%;
-  margin: 10px auto;
-  background-color: #fff;
-  border: 2px solid #e6e6e6;
-  padding: 40px 50px;
-}
-
-.header {
-  border: 0px solid #000;
-  text-align: center;
-  font-family: Bookman, URW Bookman L, serif;
-  margin-bottom: 5px;
-  font-size: 25px;
-}
-
-.header img {
-  height: 50px;
-  width: 175px;
-  margin: auto;
-  position: relative;
-  left: 40px;
-}
-
-.input-1,
-.input-2 {
-  width: 100%;
-  margin-bottom: 5px;
-  padding: 8px 12px;
-  border: 1px solid #dbdbdb;
-  box-sizing: border-box;
-  border-radius: 3px;
-}
-
-.overlap-text {
-  position: relative;
-}
-
-.overlap-text a {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  color: #003569;
-  font-size: 14px;
-  text-decoration: none;
-  font-family: 'Overpass Mono', monospace;
-  letter-spacing: -1px;
-}
-
-.btn {
-  width: 100%;
-  background-color: #3897f0;
-  border: 1px solid #3897f0;
-  padding: 5px 12px;
-  color: #fff;
-font-weight: bold;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.sub-content {
-  width: 250px;
-  height: 40%;
-  margin: 10px auto;
-  padding: 20px 50px;
-}
-
-.s-part {
-  text-align: center;
-  font-family: 'Overpass Mono', monospace;
-  word-spacing: -3px;
-  letter-spacing: -2px;
-  font-weight: normal;
-}
-
-.s-part a {
-  text-decoration: none;
-  cursor: pointer;
-  color: #3897f0;
-  font-family: 'Overpass Mono', monospace;
-  word-spacing: -3px;
-  letter-spacing: -2px;
-  font-weight: normal;
-}
-		</style>
-	</head>
-	<body>
-		<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono" rel="stylesheet">
-<div id="wrapper">
-  <div class="main-content">
-    <div class="header">
-		<span>Camagru</span>
-    </div>
-    <form action="auth.php" method="post">
-    <div class="l-part">
-      <input type="text" name="username" placeholder="Username" class="input-1" />
-      <div class="overlap-text">
-        <input type="password" name="password" placeholder="Password" class="input-2" />
-        <a href="forgot_p.php">Forgot?</a>
-      </div>
-      <input type="submit" name="submit" value="Log in" class="btn" />
-    </div>
-    </form>
-  </div>
-  <div class="sub-content">
-    <div class="s-part">
-      Don't have an account?<a href="sign_up.php">Sign up</a>
-    </div>
-  </div>
-</div>
-	</body>
-
+    <head>
+        <title>
+            Signup
+        </title>
+        <style>
+            .bs {
+                border: 1px solid #c0c0c0;
+                border-radius: 4px;
+                width: 300px;
+                height: 35px;
+                margin-left: 16px;
+                margin-bottom: 12px;
+                color: #404040;
+            }
+            .border {
+                border: 1px solid gray;
+                width: 340px;
+                border-radius: 4px;
+                margin: auto;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            legend {
+                font-family: monospace;
+                font-size: 22px;
+                color: #0099ff;
+            }
+            .submit {
+                border: 0px;
+                background-color: #0099ff;
+                width: 300px;
+                height: 35px;
+                margin-bottom: 19px;
+                margin-left: 16px;
+                border-radius: 4px;
+                position: relative;
+                color: aliceblue;
+            }
+            .logo {
+                margin-left: 88px;
+                width: 150px;
+                padding: 0px;
+                border: 0px;
+                height: 130px;
+            }
+            .tcs {
+                text-align: center;
+                position: relative;
+                top: -27px;
+                font-family: monospace;
+                font-size: 14px;
+                color: #404040;
+            }
+            .bs_2 {
+                margin: auto;
+                border: 1px solid gray;
+                width: 363px;
+                border-radius: 4px;
+                font-family: monospace;
+                font-size: 15px;
+                height: 50px;
+            }
+            .bs_3 {
+                margin-top: 14px;
+                margin-right: 8px;
+                text-align: center;
+                color: grey;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <form action="authenticated.php" method="post">
+            <br />
+            <fieldset class="border">
+                <legend>Login</legend>
+                <img class="logo" src="Pictures/Untitled.png">
+                <p><input class="bs" type="text"  name="Username" placeholder=" Enter Username" pattern="[^]{1,}" title="Username is not valid" required></p>
+                <p><input class="bs" type="password"  name="Password" placeholder=" Enter Password" pattern="{1,}" title="Password not valid" required></p>
+                <input class="submit" type="submit" name="Submit" value="Login">
+                <p class="bs_3">OR</p>
+                <a style="font-family: monospace; position: relative; left: 102px; font-size: 15px" href="forgot_password.php">forgot password</a>
+            </fieldset>
+        </form>
+        <section class="bs_2">
+            <div class="example">Do nots have an account yet?
+                <a href="sign_up.php">Sign Up</a></div>
+        </section>
+    </body>
 </html>
-

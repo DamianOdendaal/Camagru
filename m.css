@@ -1,0 +1,32 @@
+
+header {
+    background-color: aqua;
+    padding: 13px;
+}
+
+span.header {
+    font-family: monospace;
+    color: aliceblue;
+    font-size: 40px;
+    margin: 0px;
+}
+
+span.signup {
+    position: relative;
+    left: 575px;
+    top: -7px;
+    font-family: monospace;
+    color: aliceblue;
+    font-size: 20px;
+    margin: 0px;
+}
+
+span.login {
+ position: relative;
+    left: 600px;
+    top: -7px;
+    font-family: monospace;
+    color: aliceblue;
+    font-size: 20px;
+    margin: 0px;
+}
