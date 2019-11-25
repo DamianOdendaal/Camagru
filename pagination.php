@@ -8,22 +8,20 @@
      $total_items_default = count($array_default);
      $total_pages_default = ceil($total_items_default / $total_items_per_page_default);
      if (isset($_SESSION['Username']))
-     {
          $user = $_SESSION['Username'];
-     }
+
     $total_items_per_page = 10;
+
     //get current page.
     if (isset($_GET['page']))
-    {
         $page_no = $_GET['page'];
-    }
     else
-    {
         $page_no = $total_pages_default;
-    }
+
     //Set the offset for the query
     $offset = ($page_no - 1) * $total_items_per_page;
-    $statement = $conn->query("SELECT Image, Username FROM camagru.images LIMIT $offset, $total_items_per_page");
+    $statement = $conn->prepare("SELECT Image, Username FROM camagru.images LIMIT $offset, $total_items_per_page");
+
     if ($statement)
     {
         $items_array = $statement->fetchall();
@@ -34,6 +32,8 @@
         $total_items = count($array);
         $total_pages = ceil($total_items / $total_items_per_page);
     }
+    else 
+        echo "<h1>Nothing to see here</h1>";
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,8 +44,9 @@
                 background-color: white;
             }
             body {
-                background-color: #f3f2f2;
-                margin: 0px;
+                background: url('https://images.unsplash.com/photo-1492931307820-62fa5a68e0df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat;
+                background-size: cover;
+                /* background-position: center; */
             }
             .logo {
                 margin-left: 20px;

@@ -34,7 +34,7 @@
             $to = $_POST['Email'];
             $subject = "Verification link";
 
-            sendVerification($to, $subject, $msg);
+            sendVerification($to, $subject);
             header("location: confirmation.php");
         }
         else

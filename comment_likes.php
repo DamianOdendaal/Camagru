@@ -15,8 +15,10 @@
         $commentor = $_SESSION['Username'];
         $subject = "<i>Camagru</i> - Image Comment";
         $msg = "$commentor has recently commented on your image. Lets go see what $commentor said about your picture!";
-        if ($_SESSION['Pref'] == "Yes"){
+        if (isset($_SESSION['Pref']) && ($_SESSION['Pref'] == "Yes" || $_SESSION['Pref'] == "YES"))
             mail($email[0], $subject, $msg);
+        else {
+            echo "Please set your email preference";
         }
 
         // storing comments 
@@ -41,8 +43,10 @@
         $liker = $_SESSION['Username'];
         $subject = "<i>Camagru</i> - You got a like!";
         $msg = "$liker has recently liked your image. Lets go see which picture $liker liked";
-        if ($_SESSION['Pref'] == "Yes"){
+        if (isset($_SESSION['Pref']) && ($_SESSION['Pref'] == "Yes" || $_SESSION['Pref'] == "YES"))
             mail($email[0], $subject, $msg);
+        else {
+            echo "Please set your email preference";
         }
 
         //storing likes/

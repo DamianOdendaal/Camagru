@@ -1,5 +1,5 @@
 <?php
-    function sendVerification($email, $token, $url){
+    function sendVerification($email, $token){
         $subject = "<i>Camagru</i> - Email Verification";
         $header .= 'From: Camagru@DoNotReply.co.za'."\r\n";
         $pro_name = explode("/", $_SERVER['SCRIPT_NAME']);

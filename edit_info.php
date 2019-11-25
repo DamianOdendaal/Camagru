@@ -79,8 +79,9 @@
                 background-color: white;
             }
             body {
-                background-color: #f3f2f2;
-                margin: 0px;
+                background: url('https://images.unsplash.com/photo-1492931307820-62fa5a68e0df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat;
+                background-size: cover;
+                /* background-position: center; */
             }
             .logo {
                 margin-left: 20px;
