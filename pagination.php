@@ -1,6 +1,7 @@
 <?php
     session_start();
     include ("connect.php");
+    
      //for default value display
      $total_items_per_page_default = 5;
      $result_set_default = $conn->query("SELECT * FROM camagru.images");
