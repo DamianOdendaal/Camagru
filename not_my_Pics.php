@@ -110,21 +110,11 @@
                 $image_path = $_GET['pic'];
                 $result_set = $conn->query("SELECT Username FROM camagru.images WHERE Image='$image_path'");
                 $array = $result_set->fetchall();
-                // if (count($array) > 0)
-                // {
-                //     if ($_SESSION['Username'] == $array[0][0])
-                //     {
                 ?>
-                <form action="my_gallery.php" method="post">
+                <!-- <form action="my_gallery.php" method="post">
                     <input type="submit" name="delete" value="delete">
-                </form>
+                </form> -->
                 <?php
-                    // }
-                    // else {
-                    //     echo "Page invalid";
-                    // }
-                    // print_r($array);
-                // }
             }
             ?>
             <form action="" method="post">
@@ -132,9 +122,7 @@
                 
                 <span><?php 
                         if($likes != 0)
-                        {
                             echo $likes;
-                        }
                        ?>
                 </span>
             </form>

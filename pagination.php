@@ -1,41 +1,54 @@
 <?php
-    session_start();
-    include ("connect.php");
-    
-     //for default value display
-     $total_items_per_page_default = 5;
-     $result_set_default = $conn->query("SELECT * FROM camagru.images");
-     $array_default = $result_set_default->fetchall();
-     $total_items_default = count($array_default);
-     $total_pages_default = ceil($total_items_default / $total_items_per_page_default);
+        session_start();
+        require_once ("connect.php");
      if (isset($_SESSION['Username']))
-         $user = $_SESSION['Username'];
+     {
 
-    $total_items_per_page = 10;
+            // deleting an image
+            if (isset($_POST['delete']))
+            {
+                $result_set = $conn->prepare("DELETE FROM camagru.images WHERE Image=?");
+                $result_set->bindValue(1, $_SESSION['pic_loc']);
+                $result_set->execute();
+                $new_path = explode('/', $_SESSION['pic_loc']);
+                rename($_SESSION['pic_loc'], "Trash/$new_path[1]");
+            }
+            // $user = $_SESSION['Username'];
+            $total_items_per_page = 8;
+            //get current page.
+            if (isset($_GET['page']))
+            $page_no = $_GET['page'];
+            else
+            $page_no = 1;
+        }
+        //Set the offset for the query
+        $user = $_SESSION['Username'];
 
-    //get current page.
-    if (isset($_GET['page']))
-        $page_no = $_GET['page'];
-    else
-        $page_no = $total_pages_default;
 
-    //Set the offset for the query
-    $offset = ($page_no - 1) * $total_items_per_page;
-    $statement = $conn->prepare("SELECT Image, Username FROM camagru.images LIMIT $offset, $total_items_per_page");
 
-    if ($statement)
-    {
-        $items_array = $statement->fetchall();
 
-        //get the total number of pages.
-        $result_set = $conn->query("SELECT * FROM camagru.images");
-        $array = $result_set->fetchall();
-        $total_items = count($array);
-        $total_pages = ceil($total_items / $total_items_per_page);
-    }
-    else 
-        echo "<h1>Nothing to see here</h1>";
+        
+        $offset = ($page_no - 1) * $total_items_per_page;
+        $statement = $conn->query("SELECT Image FROM camagru.images  LIMIT $offset, $total_items_per_page");
+        if ($statement)
+        {
+            $items_array = $statement->fetchall();
+
+            //get the total number of pages.
+            $result_set = $conn->query("SELECT * FROM camagru.images");
+            $array = $result_set->fetchall();
+            $total_items = count($array);
+            $total_pages = ceil($total_items / $total_items_per_page);
+        }
+
+
+
+
+
+
+        // print_r($statement);
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -109,7 +122,7 @@
                 margin-left: 15px;
                 float: left;
             }
-               .user_gal {
+            .user_gal {
                 font-size: 30px;
                 color: #2f2e2f;
                 position: relative;
@@ -119,10 +132,9 @@
             }
         </style>
     </head>
-   
     <body>
         <header class="heading">
-            <img class="logo" src="Pictures/Untitled.png">
+        <a href = "user_gallery.php"><img class="logo" src="Pictures/Untitled.png"></a>
             <?php 
             if (isset($_SESSION['Username']))
             { ?>
@@ -174,4 +186,3 @@
             </main>
         </body>
     </body>
-</html>

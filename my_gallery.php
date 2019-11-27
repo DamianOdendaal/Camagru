@@ -25,7 +25,7 @@
     }
          //Set the offset for the query
         $offset = ($page_no - 1) * $total_items_per_page;
-        $statement = $conn->query("SELECT Image, Username FROM camagru.images LIMIT $offset, $total_items_per_page");
+        $statement = $conn->query("SELECT Image FROM camagru.images WHERE Username='$user' LIMIT $offset, $total_items_per_page");
         if ($statement)
         {
             $items_array = $statement->fetchall();
@@ -121,7 +121,7 @@
     </head>
     <body>
         <header class="heading">
-            <img class="logo" src="Pictures/Untitled.png">
+        <a href = "user_gallery.php"><img class="logo" src="Pictures/Untitled.png"></a>
             <?php 
             if (isset($_SESSION['Username']))
             { ?>

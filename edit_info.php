@@ -229,7 +229,7 @@
     </head>
     <body>
         <header class="heading">
-            <img class="logo" src="Pictures/Untitled.png">
+            <a href = "user_gallery.php"><img class="logo" src="Pictures/Untitled.png"></a>
             <a class="logout" href="log_user_off.php">logout</a>
         </header>
         <body>

@@ -110,7 +110,7 @@
     </head>
     <body>
         <header class="heading">
-            <img class="logo" src="Pictures/Untitled.png">
+        <a href = "user_gallery.php"><img class="logo" src="Pictures/Untitled.png"></a>
             <a class="logout" href="log_user_off.php">logout</a>
         </header>
         <nav>
@@ -127,7 +127,7 @@
             <!-- <img id="image" src="" hidden> -->
         </div>
         <div style="position: relative; top: 100px; left: 20px;">
-            <form action="process_img.php" method="post" onsubmit="upload_img();">
+            <form action="filter_1.php" method="post" onsubmit="upload_img();">
                 <input id="img_sub" name="img" type="hidden" value="">
                  <input id="img_upload" type="submit" value="Upload">
              </form>

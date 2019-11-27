@@ -8,20 +8,25 @@
         $result->execute();
         $password_hash = hash("sha512", $_POST["Password"]);
         $statement = $conn->query("SELECT Username, Password, Status FROM camagru.users");
-        $status = $conn->prepare("SELECT Status FROM camagru.users");
         $authenticate = $statement->fetchall();
-
         $index = 0;
-            if ($_SESSION['Username'] === $authenticate[0][0])
+
+        while ($index < sizeof($authenticate)){
+            $array = $authenticate[$index];
+            if ($_SESSION['Username'] === $array['Username'])
             {
-                if (($password_hash === $authenticate[0][1]))
+                if (($password_hash === $array['Password']))
                 {
                     header("location: index_logged.php");
                     // echo "This should work!";
-                }
-                else
+                }else
                     echo "Invalid Password";
+            }else {
+                echo "Usernames dont match!";
             }
+            $index++;
+        }
+            
     }
     catch(PDOException $e){
         print_r($e);
