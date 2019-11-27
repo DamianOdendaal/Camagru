@@ -90,7 +90,7 @@
         </header>
         <body>
             <nav>
-                <a class="gal" href="pagination.php">GALLERY</a>
+                <a class="gal" href="please_signin.php">GALLERY</a>
                 <a class="gal" href="sign_up.php">SIGNUP</a>
                 <a class="gal" href="login.php">LOGIN</a>
             </nav>

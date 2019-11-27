@@ -127,7 +127,7 @@
             <!-- <img id="image" src="" hidden> -->
         </div>
         <div style="position: relative; top: 100px; left: 20px;">
-            <form action="filter_1.php" method="post" onsubmit="upload_img();">
+            <form action="submit_page.php" method="post" onsubmit="upload_img();">
                 <input id="img_sub" name="img" type="hidden" value="">
                  <input id="img_upload" type="submit" value="Upload">
              </form>
