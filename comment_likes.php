@@ -1,8 +1,7 @@
 <?php
-    include ("connect.php");
+    require_once ("Config/connect.php");
     session_start();
     $_SESSION['pic_loc'] = $_GET['pic'];
-
   
     if (isset($_POST['comment']))
     {
@@ -15,12 +14,17 @@
         $commentor = $_SESSION['Username'];
         $subject = "<i>Camagru</i> - Image Comment";
         $msg = "$commentor has recently commented on your image. Lets go see what $commentor said about your picture!";
-        if (isset($_SESSION['Pref']) && ($_SESSION['Pref'] == "Yes" || $_SESSION['Pref'] == "YES"))
+
+        $results = $conn->prepare("SELECT Notification FROM camagru.users WHERE Username='$image_owner[0]'");
+        $pref = $results->fetch();
+        echo $pref;
+
+        
+        if (0)
             mail($email[0], $subject, $msg);
         else {
             echo "Please set your email preference";
         }
-
         // storing comments 
         $result = $conn->prepare("INSERT INTO camagru.`comments` (`Comment`, `Username`, `Image`) VALUES (?, ?, ?)");
         $result->bindValue(1, $_POST['comment']);
@@ -43,12 +47,11 @@
         $liker = $_SESSION['Username'];
         $subject = "<i>Camagru</i> - You got a like!";
         $msg = "$liker has recently liked your image. Lets go see which picture $liker liked";
-        if (isset($_SESSION['Pref']) && ($_SESSION['Pref'] == "Yes" || $_SESSION['Pref'] == "YES"))
+        if (0)
             mail($email[0], $subject, $msg);
         else {
             echo "Please set your email preference";
         }
-
         //storing likes/
         $result_00 = $conn->prepare("INSERT INTO camagru.`likes` (`Username`, `Image`) VALUES (?, ?)");
         $result_00->bindValue(1, $_SESSION['Username']);
@@ -88,6 +91,10 @@
                 left: 75px;
                 top: -23px;
             }
+            body {
+                background: url('https://images.unsplash.com/photo-1492931307820-62fa5a68e0df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat;
+                background-size: cover;
+            }
         </style>
     </head>
     <body>
@@ -110,21 +117,12 @@
                 $image_path = $_GET['pic'];
                 $result_set = $conn->query("SELECT Username FROM camagru.images WHERE Image='$image_path'");
                 $array = $result_set->fetchall();
-                // if (count($array) > 0)
-                // {
-                //     if ($_SESSION['Username'] == $array[0][0])
-                //     {
+            
                 ?>
                 <form action="my_gallery.php" method="post">
                     <input type="submit" name="delete" value="delete">
                 </form>
                 <?php
-                    // }
-                    // else {
-                    //     echo "Page invalid";
-                    // }
-                    // print_r($array);
-                // }
             }
             ?>
             <form action="" method="post">
@@ -144,22 +142,22 @@
     </body>
 </html>
 <?php
-    if ($_SESSION)
-    {
-        $image = $_GET['pic'];
-        $result_01 = $conn->query("SELECT Comment, Username FROM camagru.comments WHERE Image = '$image'");
-        $array = $result_01->fetchall();
-        echo '<html>';
-        echo '<textarea rows="4" cols="60" style="margin-top: 5px; resize: none;" readonly>';
-                    $index = 0;
-                    while ($index < count($array))
-                    {
-                        echo $array[$index]['Username'].": ".$array[$index]['Comment'];
-                        echo "\n";
-                        $index++;
-                    }
-        echo '</textarea>';
-        echo '';
-        echo '</html>';
-    }
+    // if ($_SESSION)
+    // {
+    //     $image = $_GET['pic'];
+    //     $result_01 = $conn->query("SELECT Comment, Username FROM camagru.comments WHERE Image = '$image'");
+    //     $array = $result_01->fetchall();
+    //     echo '<html>';
+    //     echo '<textarea rows="4" cols="60" style="margin-top: 5px; resize: none;" readonly>';
+    //                 $index = 0;
+    //                 while ($index < count($array))
+    //                 {
+    //                     echo $array[$index]['Username'].": ".$array[$index]['Comment'];
+    //                     echo "\n";
+    //                     $index++;
+    //                 }
+    //     echo '</textarea>';
+    //     echo '';
+    //     echo '</html>';
+    // }
 ?>

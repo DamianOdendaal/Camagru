@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ("connect.php");
+    require_once ("Config/connect.php");
     $link = "http://";
     $name = "/camagru";
     $homepage = $link.$_SERVER['HTTP_HOST'].$name."/index.php";

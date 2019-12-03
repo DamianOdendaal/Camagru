@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Verified</title>
-        <link rel="stylesheet" href="stylesheet.css">
         <style>
          body {
                 background: url('https://images.unsplash.com/photo-1574009183716-a8f34cfffc75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat;

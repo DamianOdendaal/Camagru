@@ -129,7 +129,7 @@
         <div>
             <?php
                 session_start();
-                include "connect.php";
+                require_once ("Config/connect.php");
             ?>
             <img class="img_filter" src='<?php echo $_SESSION['tmp_loc'];?>'>
             <br />

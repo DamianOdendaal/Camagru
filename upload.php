@@ -1,5 +1,5 @@
 <?php
-    include ('connect.php');
+    require_once ("Config/connect.php");
     session_start();
     $imageName = $_FILES['image']['name'];
     $imageTmpName = $_FILES['image']['tmp_name'];

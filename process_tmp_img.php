@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ("connect.php");
+    require_once ("Config/connect.php");
     // print_r($_POST);
     if (array_key_exists("s1", $_POST))
         $img = $_POST['s1'];

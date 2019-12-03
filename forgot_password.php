@@ -5,6 +5,11 @@
             Signup
         </title>
                 <style>
+            body {
+                background: url('https://images.unsplash.com/photo-1574281183650-14db8f28c259?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80') no-repeat;
+                background-size: cover;
+                background-position:center;
+            }
             .bs {
                 border: 1px solid #c0c0c0;
                 border-radius: 4px;
@@ -89,7 +94,6 @@
                 font-size: 14px;
             }
         </style>
-        <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
         <form action="pass_auth.php" method="post">

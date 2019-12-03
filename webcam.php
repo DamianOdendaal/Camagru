@@ -76,10 +76,9 @@
                 top: 45px;
                 left: -200px;
             }
-            .pic_button {
-                position: relative;
-                top: 30px;
-                left: -250px;
+            #pic_button {
+                position: absolute;
+                top: 250px;
             }
             #canvas {
                 position: relative;
@@ -122,10 +121,15 @@
         </nav>
          <div class="booth">
             <video id="video" width="400px" height="300px"></video>
-            <button><a href="#" id="pic_button">take pic</a></button>
+            <a href="#" id="pic_button"><button>Capture Image</button></a>
             <canvas id="canvas" width="400px" height="300px"></canvas>
-            <!-- <img id="image" src="" hidden> -->
         </div>
+
+
+
+
+
+        
         <div style="position: relative; top: 100px; left: 20px;">
             <form action="submit_page.php" method="post" onsubmit="upload_img();">
                 <input id="img_sub" name="img" type="hidden" value="">
@@ -133,15 +137,15 @@
              </form>
             <form action="process_tmp_img.php" method="post" onsubmit="tmp_upload();">
                 <input  id="tmp_img" name="s1" type="hidden" value="">
-                <input type="submit" value="sticker_1">
+                <input type="submit" value="Mr_Green" style = "background-color:lightgreen;">
             </form>
             <form action="process_tmp_img.php" method="post" onsubmit="tmp_u2();">
                 <input  id="tmp_i2" name="s2" type="hidden" value="">
-                <input type="submit" value="sticker_2">
+                <input type="submit" value="Dr_Blue" style = "background-color:lightblue;">
             </form>
             <form action="process_tmp_img.php" method="post" onsubmit="tmp_u3();">
                 <input  id="tmp_i3" name="s3" type="hidden" value="">
-                <input type="submit" value="sticker_3">
+                <input type="submit" value="Prof_Red" style = "background-color:pink;">
             </form>
         </div>
         <script src="photo.js">

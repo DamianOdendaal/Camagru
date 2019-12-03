@@ -1,5 +1,5 @@
 <?php
-    include ("connect.php");
+    require_once ("Config/connect.php");
     session_start();
     if (isset($_SESSION['Username']))
     {
@@ -12,6 +12,8 @@
                     $new_pass = $_POST['new_pass'];
                     $old_pass = $_POST['old_pass'];
                     $username = $_SESSION['Username'];
+
+                    
                     $db_pass = $conn->query("SELECT Password FROM camagru.users WHERE Username='$username'");
                     $pass = $db_pass->fetch();
                     $hashed_old_pass = hash("Sha512", $old_pass);
@@ -22,7 +24,7 @@
                         $result->bindValue(1, $hashed_new_pass);
                         $result->bindValue(2, $username);
                         $result->execute();
-                        $_SESSION['Password'] = $_POST['new_pass'];
+                        // $_SESSION['Password'] = $_POST['new_pass'];
                     }
                     else
                     {
@@ -58,13 +60,16 @@
                 $prefence = $_POST['notification'];
                 if ($prefence == "Yes")
                 {
-                    $conn->query("UPDATE camagru.users SET Notification='$prefence' WHERE Username='$username'");
-                    $_SESSION['Pref'] = "Yes";
+                    $results = $conn->prepare("UPDATE camagru.users SET Notification=? WHERE Username='$username'");
+                    $results->bindValue(1, $prefence);
+                    $results->execute();
+                    
                 }
                 if ($prefence == "No")
                 {
-                    $conn->query("UPDATE camagru.users SET Notification='$prefence' WHERE Username='$username'");
-                    $_SESSION['Pref'] = "No";
+                    $results = $conn->prepare("UPDATE camagru.users SET Notification=? WHERE Username='$username'");
+                    $results->bindValue(1, $prefence);
+                    $results->execute();
                 }
             }
         }

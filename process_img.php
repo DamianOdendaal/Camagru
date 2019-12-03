@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ("connect.php");
+    require_once ("Config/connect.php");
     try {
         $img = $_POST['img'];
         if (strlen($img) > 0)

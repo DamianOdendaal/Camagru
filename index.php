@@ -1,6 +1,4 @@
-<?php
-    // header ("location: pagination.php")
-?>
+
 <!DOCTYPE html>
 <html>
     <head>

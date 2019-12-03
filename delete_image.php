@@ -1,5 +1,5 @@
 <?php
-    require_once ("connect.php");
+    require_once ("Config/connect.php");
     function delete_image($image_name)
     {
         $result_set = $conn->prepare("DELETE FROM images WHERE Image=?");

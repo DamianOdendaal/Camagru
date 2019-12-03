@@ -119,14 +119,6 @@
                 <a class="user_gal" href="my_gallery.php">MY_GALLERY</a>
                 <a class="user_gal" href="edit_info.php">Edit_Profile</a>
             </nav>
-             <!-- <main>
-              <form action="process_post.php" method="post" enctype="multipart/form-data" onsubmit="image_upload();">
-                    <input id="image" name="img" type="hidden" value="">
-                    <input class="upload" type="file" id = "up_img" name="file" onchange="GetFile(event)" >
-                    <input class="upload_button" type="submit" name="submit" value="Upload">
-                </form>
-             </main> 
-            <img src="" id="ImageFile" class="img" name="image">  -->
         </body>
     </body>
 </html>

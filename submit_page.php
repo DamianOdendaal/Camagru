@@ -1,15 +1,9 @@
 <?php
     session_start();
-    include ("connect.php");
-    // print_r($_POST);
-    if (array_key_exists("s1", $_POST))
-        $img = $_POST['s1'];
-    elseif (array_key_exists("s2", $_POST))
-        $img = $_POST['s2'];
-    elseif (array_key_exists("s3", $_POST))
-        $img = $_POST['s3'];
-    else
-        $img = $_POST['img'];
+    require_once ("Config/connect.php");
+
+    $img = $_POST['img'];
+    
 
     $img = str_replace('data:image/png;base64,', '', $img);
     $img = str_replace(' ', '+', $img);

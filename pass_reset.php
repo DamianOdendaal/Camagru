@@ -5,6 +5,11 @@
             Signup
         </title>
                 <style>
+                   body {
+                background: url('https://images.unsplash.com/photo-1574281183650-14db8f28c259?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80') no-repeat;
+                background-size: cover;
+                background-position:center;
+            }
             .bs {
                 border: 1px solid #c0c0c0;
                 border-radius: 4px;
@@ -89,7 +94,6 @@
                 font-size: 14px;
             }
         </style>
-        <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
         <form action="reset.php" method="post">
@@ -97,7 +101,7 @@
             <fieldset class="border">
                 <legend>Reset Password</legend>
                 <img class="logo" src="Pictures/Untitled.png">
-                <p><input class="bs" type="password" name="Newpass" Placeholder=" New Password" pattern="{1,}" title="password is not valid" required></p>
+                <p><input class="bs" type="password" name="Newpass" Placeholder=" New Password" pattern="(?=.*[A-Z0-9])(?=.*[a-z]).{8,}" title="Please make sure your password is longer that 8 chars with upper and lowercase letters and a digit" required></p>
                 <input class="submit" type="submit" name="Submit" value="Reset Password">
             </fieldset>
         </form>

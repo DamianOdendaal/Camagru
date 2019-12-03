@@ -2,7 +2,7 @@
      session_start();
      if (isset($_SESSION['Username']))
      {
-            include ("connect.php");
+        require_once ("Config/connect.php");
             if (isset($_POST['delete']))
             {
                 $result_set = $conn->prepare("DELETE FROM camagru.images WHERE Image=?");

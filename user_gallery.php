@@ -125,7 +125,7 @@
                     <input class="upload_button" type="submit" name="submit" value="Upload">
                 </form>
              </main> 
-            <img src="" id="ImageFile" class="img" name="image"> 
+            <img src="" id="ImageFile" class="img" name="image" hidden> 
         </body>
     </body>
 </html>

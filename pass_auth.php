@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ("connect.php");
+    require_once ("Config/connect.php");
     $_SESSION["Email_P"] = $_POST["Email"];;
     $email = $_SESSION["Email_P"];
     $subject = "<i>Camagru</i> - Password Reset";
